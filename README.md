@@ -6,3 +6,5 @@
 - Product listing (crud)
 - It can be used for products or operations with more than one subtitle.
 
+
+![Insert product to cart](addToCart.gif) 
