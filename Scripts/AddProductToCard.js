@@ -38,16 +38,16 @@ function AddToCart(productId, description, photourl, productPrice, productTitle)
  * Example: ("IdNumber",53617501341). It sends the data containing the field name and field value to be changed.
  * */
  function updateIban() {
-    const IbanNo = document.getElementById("IdNumber").value;
+    const IdNumber = document.getElementById("IdNumber").value;
     console.log(IbanNo);
-    if (IbanNo !== null || IbanNo.length === 26) {
+    if (IdNumber !== null || IdNumber.length === 11) {
         const participant = {};
         participant.fieldName = "IdNumber";
         participant.fieldValue = $("#IdNumber").val();
         $.ajax({
             type: "POST",
             url: "/{controller Name}/{Function Name}",
-            data:  + JSON.stringify({'UserData':participant}),
+            data: JSON.stringify({'UserData':participant}),
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: function (data) {
@@ -64,7 +64,7 @@ function AddToCart(productId, description, photourl, productPrice, productTitle)
             }
         });
     } else {
-        alert("İnput Error!!!");
+        alert("Input Error!!!");
     }
 
 }
